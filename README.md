@@ -1,33 +1,36 @@
-# Sound Vane
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Air quality you can hear.
+## Getting Started
 
-Sound Vane leverages utilities from the World Air Quality Index Project. To learn more about the project, make sure to visit their site here: https://aqicn.org/
+First, run the development server:
 
-Tone.js is a Web Audio framework for creating interactive music in the browser. (https://tonejs.github.io/)
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Develop
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Sound Vane uses React Typescript for its frontend and NodeJS for its backend. By default, the frontend runs on port 3000 and the backend runs on port 3001.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-Clone the git repo:
+## Learn More
 
-`git clone https://github.com/marjo-luc/sound-vane.git`
+To learn more about Next.js, take a look at the following resources:
 
-Run the startup script to start the frontend and backend:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-`bash sound_vane.sh`
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+## Deploy on Vercel
 
-Alternatively, in one terminal run the following to start the frontend:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-`npm start`
-
-
-In a second terminal, run the following to start the backend:
-
-`npm run clean-start`
-
-
-Navigate to [http://localhost:3000](http://localhost:3000) to see the app. The page will reload as you make edits.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
