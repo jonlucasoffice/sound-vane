@@ -8,7 +8,6 @@ export default function Audio({ noteModifiers }: { noteModifiers: any }) {
   const playNote = (note: any) => {
     let player = document.createElement("audio")
     player.controls = false
-    player.allowsInlineMediaPlayback = true
 
     player.src = `audio/${note.replace("#", "s")}.mp3`
 
