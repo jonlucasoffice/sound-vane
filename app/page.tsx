@@ -52,7 +52,7 @@ export default function Home() {
           latitude: 41.3805,
           zoom: 3.5,
         }}
-        mapStyle="mapbox://styles/mapbox/dark-v11"
+        mapStyle="mapbox://styles/mapbox/light-v11"
       >
         {data && (
           <Source type="geojson" data={data}>
