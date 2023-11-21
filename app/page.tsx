@@ -13,6 +13,8 @@ export default function Home() {
   const [noteModifiers, setNoteModifiers] = useState([])
   const [heatmap, setHeatmap] = useState(null)
 
+  const [isMuted, setIsMuted] = useState(true)
+
   function handleDragEnd(e: any) {
     getAQ(e.viewState.longitude, e.viewState.latitude).then((result) => {
       setAQ(result)
@@ -60,8 +62,13 @@ export default function Home() {
           </Source>
         )}
       </MapGL>
-      <Panel aq={aq} noteModifiers={noteModifiers} />
-      <Audio noteModifiers={noteModifiers} />
+      <Panel
+        aq={aq}
+        noteModifiers={noteModifiers}
+        setIsMuted={setIsMuted}
+        isMuted={isMuted}
+      />
+      <Audio noteModifiers={noteModifiers} isMuted={isMuted} />
       <div id="crosshair"></div>
     </main>
   )

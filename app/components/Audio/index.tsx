@@ -2,7 +2,13 @@
 
 import React, { useEffect, useState } from "react"
 
-export default function Audio({ noteModifiers }: { noteModifiers: any }) {
+export default function Audio({
+  noteModifiers,
+  isMuted,
+}: {
+  noteModifiers: any
+  isMuted: boolean
+}) {
   const [isPlaying, setIsPlaying] = useState(false)
 
   const playNote = (note: any) => {
@@ -11,7 +17,10 @@ export default function Audio({ noteModifiers }: { noteModifiers: any }) {
 
     player.src = `audio/${note.replace("#", "s")}.mp3`
 
-    player.play()
+    if (!isMuted) {
+      player.play()
+    }
+
     player.addEventListener("ended", function () {
       player.remove()
     })
